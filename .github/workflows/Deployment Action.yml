@@ -38,8 +38,3 @@ jobs:
       # Deploying App to Surge  
       - name: Deploying to surge
         run: surge ./ mymarchjsprojects.surge.sh --token ${{ secrets.SURGE_TOKEN }}
-        
-        
-        
-      
-        run: 
