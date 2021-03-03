@@ -85,4 +85,5 @@ button:focus {
 button a {
   text-decoration: none;
   color: white;
+  display: block;
 }

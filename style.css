@@ -1,7 +1,3 @@
-:root {
-  --success: lightgreen;
-}
-
-h1 {
-  background-color: var(--success);
+a {
+  text-decoration: none;
 }
