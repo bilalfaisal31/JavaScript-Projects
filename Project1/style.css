@@ -78,7 +78,7 @@ input:focus {
   border-color: gray;
 }
 
-button a:focus {
+button:focus {
   outline: none;
 }
 
