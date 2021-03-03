@@ -78,8 +78,11 @@ input:focus {
   border-color: gray;
 }
 
+button a:focus {
+  outline: none;
+}
+
 button a {
   text-decoration: none;
-  outline: none;
   color: white;
 }
