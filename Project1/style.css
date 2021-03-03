@@ -80,5 +80,6 @@ input:focus {
 
 button a {
   text-decoration: none;
+  outline: none;
   color: white;
 }
