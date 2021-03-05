@@ -62,12 +62,16 @@ body {
   font-size: 18px;
 }
 
-.formportion .error {
+.formportion span {
   visibility: hidden;
   color: #ea3c53;
+  font-size: small;
 }
 .formportion.error input {
   border-color: #ea3c53;
+}
+.formportion.error span {
+  visibility: visible;
 }
 .formportion.success input {
   border-color: #50c878;
