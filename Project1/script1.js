@@ -18,21 +18,33 @@ function validateEmail(email) {
   const re = /^(([^<>()[\]\\.,;:\s@"]+(\.[^<>()[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/;
   return re.test(String(email).toLowerCase());
 }
-function checkRequired(inputArray) {
-  inputArray.forEach(function (input) {
-    if (input.value === "") {
-      showError(input, `${upper(input.id)} is required.`);
-    } else {
-      showSuccess(input);
-    }
-  });
-}
-function upper(str) {
-  return str.charAt(0).toUpperCase() + str.slice(1);
-}
 
 form.addEventListener("submit", function (e) {
   e.preventDefault();
 
-  checkRequired([username, email, password, password2]);
+  if (username.value === "") {
+    showError(username, "*Username Field can't be empty");
+  } else {
+    showSuccess(username);
+  }
+
+  if (email.value === "") {
+    showError(email, "*Email Field can't be empty");
+  } else if (!validateEmail(email.value)) {
+    showError(email, "*Email is Invalid");
+  } else {
+    showSuccess(email);
+  }
+
+  if (password.value === "") {
+    showError(password, "*Password Field can't be empty");
+  } else {
+    showSuccess(password);
+  }
+
+  if (password2.value === "") {
+    showError(password2, "*Password Confirmation is required");
+  } else {
+    showSuccess(password2);
+  }
 });
