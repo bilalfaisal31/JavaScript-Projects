@@ -14,6 +14,10 @@ function showSuccess(input) {
   const formPorion = input.parentElement;
   formPorion.className = "formportion success";
 }
+function validateEmail(email) {
+  const re = /^(([^<>()[\]\\.,;:\s@"]+(\.[^<>()[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/;
+  return re.test(String(email).toLowerCase());
+}
 
 form.addEventListener("submit", function (e) {
   e.preventDefault();
@@ -26,6 +30,8 @@ form.addEventListener("submit", function (e) {
 
   if (email.value === "") {
     showError(email, "*Email Field can't be empty");
+  } else if (!validateEmail(email.value)) {
+    showError(email, "*Email is Invalid");
   } else {
     showSuccess(email);
   }
@@ -37,7 +43,7 @@ form.addEventListener("submit", function (e) {
   }
 
   if (password2.value === "") {
-    showError(password2, "*Confirm Password Field can't be empty");
+    showError(password2, "*Password Confirmation is required");
   } else {
     showSuccess(password2);
   }
