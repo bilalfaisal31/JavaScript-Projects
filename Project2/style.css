@@ -30,8 +30,8 @@ body {
 
 .seat {
   background-color: darkgray;
-  height: 14px;
-  width: 13px;
+  height: 16px;
+  width: 15px;
   margin: 3px;
   border-radius: 7px 7px 0px 0px;
 }
@@ -89,7 +89,7 @@ body {
   width: 100%;
   border-radius: 10px;
   margin: 15px 0;
-  transform: rotateX(-45deg);
+  transform: rotateX(135deg);
   box-shadow: 0 3px 10px rgba(255, 255, 255, 0.7);
 }
 
@@ -100,5 +100,6 @@ body {
 
 p.text span {
   color: antiquewhite;
-  font-size: 18px;
+  font-size: 17px;
+  font-weight: bold;
 }
