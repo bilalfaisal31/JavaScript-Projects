@@ -2,13 +2,13 @@
 
 name: Project Deployment
 
-# Controls when the action will run. 
+# Controls when the action will run.
 on:
   # Triggers the workflow on push or pull request events but only for the main branch
   push:
-    branches: [ main ]
+    branches: [main]
   pull_request:
-    branches: [ main ]
+    branches: [main]
 
   # Allows you to run this workflow manually from the Actions tab
   workflow_dispatch:
@@ -29,12 +29,12 @@ jobs:
       - name: Installing Node
         uses: actions/setup-node@v2-beta
         with:
-          node-version: '12'
-      
+          node-version: "12"
+
       # Setup to surge
       - name: Installing Surge
         run: npm install --global surge
-        
-      # Deploying App to Surge  
+
+      # Deploying App to Surge
       - name: Deploying to surge
-        run: surge ./ mymarchjsprojects.surge.sh --token ${{ secrets.SURGE_TOKEN }}
+        run: surge ./ jsprojectsbilal.surge.sh --token ${{ secrets.SURGE_TOKEN }}
