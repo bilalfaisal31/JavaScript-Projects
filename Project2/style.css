@@ -98,7 +98,8 @@ body {
   margin-bottom: 20px;
 }
 
-p.text span {
+p.text span,
+.dollar-sign {
   color: antiquewhite;
   font-size: 17px;
   font-weight: bold;
