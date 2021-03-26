@@ -1,0 +1,89 @@
+@import url("https://fonts.googleapis.com/css2?family=Lato&display=swap");
+
+* {
+  box-sizing: border-box;
+}
+body {
+  font-family: "Lato", sans-serif;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  height: 100vh;
+  margin: 0;
+  background-image: linear-gradient(to top left, #753682 0%, #bf2e34 100%);
+  letter-spacing: 1px;
+  word-spacing: 2px;
+}
+
+.player {
+  display: flex;
+  flex-direction: column;
+  width: 300px;
+  text-align: center;
+  padding: 50px;
+  float: left;
+  flex-shrink: 1;
+  background-color: rgba(255, 255, 255, 0.35);
+}
+
+.player-1 {
+  border-radius: 10px 0 0 10px;
+}
+
+.player-2 {
+  border-radius: 0 10px 10px 0;
+}
+.player.not-current {
+  opacity: 0.7;
+}
+.centerline {
+  position: absolute;
+  text-align: center;
+}
+
+.centerline img {
+  width: 50px;
+}
+.current-score-box {
+  background-color: lightgray;
+  border-radius: 8px;
+  width: 60%;
+  align-self: center;
+}
+
+.new-game-txt {
+  padding-top: 20px;
+}
+
+@media all and (max-width: 600px) {
+  .centerline {
+    font-size: small;
+  }
+  .centerline img {
+    width: 40px;
+  }
+  .player {
+    width: 200px;
+    height: 320px;
+  }
+  .current-score-box {
+    width: 80%;
+  }
+  .new-game-txt {
+    padding-top: 40px;
+  }
+}
+
+@media all and (max-width: 520px) {
+  .player {
+    width: 150px;
+    height: 350px;
+  }
+  .current-score-box {
+    width: 130%;
+  }
+  .new-game-txt {
+    padding-top: 20px;
+  }
+}
