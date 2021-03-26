@@ -64,7 +64,7 @@ body {
     width: 40px;
   }
   .player {
-    width: 200px;
+    width: 250px;
     height: 320px;
   }
   .current-score-box {
@@ -75,7 +75,7 @@ body {
   }
 }
 
-@media all and (max-width: 520px) {
+@media all and (max-width: 500px) {
   .player {
     width: 150px;
     height: 350px;
@@ -85,5 +85,12 @@ body {
   }
   .new-game-txt {
     padding-top: 20px;
+  }
+}
+
+@media all and (max-width: 400px) {
+  .player {
+    width: 130px;
+    height: 350px;
   }
 }
