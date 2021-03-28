@@ -123,7 +123,7 @@ body {
     border-radius: 15px;
   }
   .player {
-    width: 250px;
+    width: 240px;
     height: 350px;
   }
   .current-score-box {
@@ -138,14 +138,14 @@ body {
 
 @media all and (max-width: 500px) {
   .player {
-    width: 200px;
+    width: 180px;
     height: 350px;
   }
   .centerline button {
     font-size: x-small;
   }
   .new-game-txt {
-    margin-top: 20px;
+    margin-top: 3px;
   }
   .centerline img {
     width: 40px;
@@ -162,13 +162,30 @@ body {
 
 @media all and (max-width: 400px) {
   .player {
+    width: 150px;
+    height: 350px;
+  }
+  .current-score-box {
+    margin-top: 35px;
+    width: 180%;
+  }
+  .name-txt {
+    font-size: large;
+    text-align: left;
+  }
+  .new-game-txt {
+    margin-top: 0px;
+  }
+}
+@media all and (max-width: 300px) {
+  .player {
     width: 130px;
     height: 350px;
   }
   .current-score-box {
     margin-top: 35px;
     font-size: small;
-    width: 250%;
+    width: 240%;
   }
   .name-txt {
     font-size: medium;
