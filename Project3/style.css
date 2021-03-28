@@ -41,8 +41,9 @@ body {
 .player-1 {
   border-radius: 0 10px 10px 0;
 }
-.player.active-player {
+.active-player {
   opacity: 1;
+  transition: opacity 0.9s;
 }
 .centerline {
   position: absolute;
@@ -50,10 +51,12 @@ body {
 }
 
 .centerline img {
-  width: 50px;
-  margin-bottom: 10px;
-  margin-top: 20px;
+  width: 60px;
+  margin-bottom: 20px;
+  margin-top: 25px;
+  box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
 }
+
 .centerline button {
   background: none;
   border: none;
@@ -62,12 +65,18 @@ body {
   margin-left: auto;
   margin-right: auto;
   padding: 6px;
-  margin-bottom: 10px;
+  margin-bottom: 15px;
   font-size: medium;
   outline: none;
   background-color: whitesmoke;
   border-radius: 15px;
 }
+.centerline button:active {
+  transition: 0.1s;
+  transform: translate(0%, 2px);
+  box-shadow: 0 1rem 2rem rgba(0, 0, 0, 0.15);
+}
+
 .current-score-box {
   background-color: #c7365f;
   border-radius: 8px;
@@ -82,14 +91,22 @@ body {
   margin-top: 20px;
 }
 
-@media all and (max-width: 700px) {
+.player-winner {
+  background-color: #2f2f2f;
+}
+.player-winner .name {
+  color: #c7365f;
+  font-weight: bolder;
+}
+
+@media all and (max-width: 720px) {
   .centerline {
     font-size: small;
   }
   .centerline img {
-    width: 40px;
-    margin-bottom: 10px;
-    margin-top: 10px;
+    width: 45px;
+    margin-bottom: 15px;
+    margin-top: 25px;
   }
   .centerline button {
     background: none;
@@ -100,7 +117,7 @@ body {
     margin-right: auto;
     padding: 5px 7px;
     margin-bottom: 10px;
-    font-size: x-small;
+    font-size: small;
     outline: none;
     background-color: whitesmoke;
     border-radius: 15px;
@@ -121,15 +138,25 @@ body {
 
 @media all and (max-width: 500px) {
   .player {
-    width: 150px;
+    width: 200px;
     height: 350px;
   }
+  .centerline button {
+    font-size: x-small;
+  }
+  .new-game-txt {
+    margin-top: 20px;
+  }
+  .centerline img {
+    width: 40px;
+    margin-bottom: 10px;
+    margin-top: 10px;
+  }
+}
+@media all and (max-width: 490px) {
   .current-score-box {
     width: 150%;
     margin-top: 0px;
-  }
-  .new-game-txt {
-    padding-top: 20px;
   }
 }
 
@@ -137,5 +164,17 @@ body {
   .player {
     width: 130px;
     height: 350px;
+  }
+  .current-score-box {
+    margin-top: 35px;
+    font-size: small;
+    width: 250%;
+  }
+  .name-txt {
+    font-size: medium;
+    text-align: left;
+  }
+  .new-game-txt {
+    margin-top: -3px;
   }
 }
