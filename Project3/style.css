@@ -99,6 +99,56 @@ body {
   font-weight: bolder;
 }
 
+/* Instruction box model code */
+
+.close-modal {
+  background: none;
+  border: none;
+  cursor: pointer;
+  color: #333;
+
+  position: absolute;
+  top: 5px;
+  right: 10px;
+  font-size: 45px;
+}
+
+.hidden1 {
+  display: none;
+}
+
+.modal {
+  position: absolute;
+  transform: translate(-50%, -50%);
+  width: 60%;
+  top: 50%;
+  left: 50%;
+  text-align: justify;
+
+  background-color: white;
+  padding: 20px 30px 0px 40px;
+  border-radius: 5px;
+  box-shadow: 0 3rem 5rem rgba(0, 0, 0, 0.3);
+  z-index: 10;
+}
+
+.modal p {
+  padding-top: 10px;
+  padding-bottom: 10px;
+}
+.overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.6);
+
+  /* IMP */
+  backdrop-filter: blur(3px);
+  z-index: 5;
+}
+
 @media all and (max-width: 720px) {
   .centerline {
     font-size: small;
@@ -132,7 +182,14 @@ body {
     margin-top: 10px;
   }
   .new-game-txt {
-    margin-top: 35px;
+    margin-top: 85px;
+  }
+  .last-btn {
+    margin-top: 30px;
+  }
+  .modal {
+    width: 70%;
+    padding: 10px 25px 10px 25px;
   }
 }
 
@@ -145,18 +202,36 @@ body {
     font-size: x-small;
   }
   .new-game-txt {
-    margin-top: 3px;
+    margin-top: 85px;
+  }
+  .last-btn {
+    margin-top: 30px;
   }
   .centerline img {
     width: 40px;
     margin-bottom: 10px;
     margin-top: 10px;
   }
+  .current-score-box {
+    width: 95%;
+    margin-top: 0px;
+  }
+  .modal {
+    width: 80%;
+    font-size: small;
+    padding: 10px 25px 10px 25px;
+  }
 }
 @media all and (max-width: 490px) {
   .current-score-box {
-    width: 150%;
+    width: 95%;
     margin-top: 0px;
+  }
+  .new-game-txt {
+    margin-top: 100px;
+  }
+  .last-btn {
+    margin-top: 50px;
   }
 }
 
@@ -166,32 +241,48 @@ body {
     height: 350px;
   }
   .current-score-box {
-    margin-top: 35px;
-    width: 180%;
+    margin-top: 20px;
+    width: 160%;
   }
   .name-txt {
     font-size: large;
     text-align: left;
   }
   .new-game-txt {
-    margin-top: 0px;
+    margin-top: 90px;
+  }
+  .last-btn {
+    margin-top: 65px;
+  }
+  .modal {
+    width: 80%;
+    font-size: x-small;
+    padding: 10px 25px 10px 25px;
   }
 }
 @media all and (max-width: 300px) {
   .player {
     width: 130px;
-    height: 350px;
+    height: 340px;
   }
   .current-score-box {
-    margin-top: 35px;
+    margin-top: 25px;
     font-size: small;
-    width: 240%;
+    width: 230%;
   }
   .name-txt {
     font-size: medium;
     text-align: left;
   }
   .new-game-txt {
-    margin-top: -3px;
+    margin-top: 90px;
+  }
+  .last-btn {
+    margin-top: 45px;
+  }
+  .modal {
+    width: 80%;
+    font-size: xx-small;
+    padding: 10px 25px 8px 25px;
   }
 }

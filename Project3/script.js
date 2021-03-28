@@ -88,3 +88,30 @@ btn_hold.addEventListener("click", function () {
 });
 
 btn_reset.addEventListener("click", init);
+
+// Instructions code
+
+const modal = document.querySelector(".modal");
+const overlay = document.querySelector(".overlay");
+const closeBtn = document.querySelector(".close-modal");
+const showBtn = document.querySelector(".show-modal");
+
+function openModal() {
+  modal.classList.remove("hidden1");
+  overlay.classList.remove("hidden1");
+}
+function closeModal() {
+  modal.classList.add("hidden1");
+  overlay.classList.add("hidden1");
+}
+
+showBtn.addEventListener("click", openModal);
+
+closeBtn.addEventListener("click", closeModal);
+overlay.addEventListener("click", closeModal);
+
+document.addEventListener("keydown", function (e) {
+  if (e.key === "Escape" && !modal.classList.contains("hidden1")) {
+    closeModal();
+  }
+});

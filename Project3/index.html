@@ -31,7 +31,22 @@
       <img src="dice-1.png" id="dice" />
       <button id="btn-dice">🎲 Roll Dice</button>
       <button id="btn-hold">⏺ Hold</button>
+      <button class="show-modal last-btn">📘 How To Play ?</button>
     </div>
+
+    <div class="modal hidden1">
+      <button class="close-modal">&times;</button>
+      <h1>Instructions📃</h1>
+
+      <p>
+        Each Player Roll the dice on his turn, and the number gets added to his
+        current score. Now you can roll the dice again or hold this score, and
+        this will add current score to the total. Whenever you roll a one,
+        you'll loose all your curent score and it's then the next player turn.
+        The first player to reach 50 points will win the game.
+      </p>
+    </div>
+    <div class="overlay hidden1"></div>
     <script src="script.js"></script>
   </body>
 </html>
