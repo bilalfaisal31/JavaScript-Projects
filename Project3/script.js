@@ -11,14 +11,36 @@ const current_score_p1 = document.querySelector("#current-score-p1");
 const player_1 = document.querySelector(".player-0");
 const player_2 = document.querySelector(".player-1");
 
-score_0.innerText = 0;
-score_1.innerText = 0;
-current_score_p0.innerText = 0;
-let currentScore = Number(current_score_p0.innerText);
-let activePlayer = 0;
-let playing = true;
+let currentScore, activePlayer, playing;
 
-diceElement.classList.add("hidden");
+function init() {
+  currentScore = 0;
+  activePlayer = 0;
+  playing = true;
+
+  score_0.innerText = 0;
+  score_1.innerText = 0;
+  current_score_p0.innerText = 0;
+  current_score_p1.innerText = 0;
+
+  diceElement.classList.add("hidden");
+  player_1.classList.remove("player-winner");
+  player_2.classList.remove("player-winner");
+  player_1.classList.add("active-player");
+  player_2.classList.remove("active-player");
+}
+
+function switchPlayer() {
+  currentScore = 0;
+  document.querySelector(
+    `#current-score-p${activePlayer}`
+  ).innerText = currentScore;
+
+  activePlayer = activePlayer === 0 ? 1 : 0;
+
+  player_1.classList.toggle("active-player");
+  player_2.classList.toggle("active-player");
+}
 
 btn_dice.addEventListener("click", function () {
   if (playing) {
@@ -63,14 +85,4 @@ btn_hold.addEventListener("click", function () {
   }
 });
 
-function switchPlayer() {
-  currentScore = 0;
-  document.querySelector(
-    `#current-score-p${activePlayer}`
-  ).innerText = currentScore;
-
-  activePlayer = activePlayer === 0 ? 1 : 0;
-
-  player_1.classList.toggle("active-player");
-  player_2.classList.toggle("active-player");
-}
+btn_reset.addEventListener("click", init);
