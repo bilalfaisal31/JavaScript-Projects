@@ -65,6 +65,8 @@ btn_dice.addEventListener("click", function () {
   }
 });
 
+init();
+
 btn_hold.addEventListener("click", function () {
   if (playing) {
     let totalScore =
