@@ -55,6 +55,18 @@ body {
   }
 }
 
+@media (max-width: 550px) {
+  .duration {
+    width: 15%;
+  }
+}
+
+@media (max-width: 400px) {
+  .duration {
+    width: 25%;
+  }
+}
+
 @media (max-width: 300px) {
   .video,
   .controls {
