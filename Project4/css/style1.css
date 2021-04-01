@@ -26,13 +26,16 @@ body {
   display: flex;
   width: 60%;
   background-color: darkgray;
-  padding: 10px 10px 10px 10px;
+  padding: 10px;
   align-items: center;
   justify-content: center;
   border-radius: 0 0 10px 10px;
 }
 .duration {
   margin-left: 5px;
+  margin-bottom: 1px;
+  width: 8%;
+  text-align: center;
 }
 .btn {
   border: 0;
@@ -44,6 +47,21 @@ body {
 @media (max-width: 800px) {
   .video,
   .controls {
-    width: 90%;
+    width: 80%;
+  }
+
+  .duration {
+    width: 10%;
+  }
+}
+
+@media (max-width: 300px) {
+  .video,
+  .controls {
+    width: 95%;
+  }
+  .duration {
+    width: 30%;
+    margin-bottom: 2px;
   }
 }
